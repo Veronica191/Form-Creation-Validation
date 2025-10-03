@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Form submit event listener
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // stop normal form submission
+        event.preventDefault(); // Prevent default form submission
 
         // Get trimmed input values
         const username = document.getElementById("username").value.trim();
@@ -35,15 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Display feedback
-        feedbackDiv.style.display = "block"; // make visible
+        feedbackDiv.style.display = "block"; // make it visible
         if (isValid) {
             feedbackDiv.textContent = "Registration successful!";
             feedbackDiv.style.color = "#28a745"; // green
-            feedbackDiv.style.backgroundColor = "#d4edda";
         } else {
             feedbackDiv.innerHTML = messages.join("<br>");
-            feedbackDiv.style.color = "#d8000c"; // red
-            feedbackDiv.style.backgroundColor = "#ffbaba";
+            feedbackDiv.style.color = "#dc3545"; // red
         }
     });
 });
